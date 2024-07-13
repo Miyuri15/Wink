@@ -1,0 +1,13 @@
+{
+  "node": {
+    "53c2eeae0cf6af2420c02778e249be62b4469670": {
+      "workers": {
+        "app/page": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/node_modules/@clerk/nextjs/dist/esm/app-router/server-actions/invalidateCache.js [app-rsc] (ecmascript, action, ecmascript)\" } [app-rsc] (ecmascript)"
+      },
+      "layer": {
+        "app/page": "actionBrowser"
+      }
+    }
+  },
+  "edge": {}
+}
