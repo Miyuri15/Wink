@@ -9,7 +9,7 @@ const Navbar =()=> {
         <div className =' h-24 flex items-center justify-between'>
             {/* LEFT */}
             <div className="md:hidden lg:block w-[20%] text-sm">
-                <Link href={"/"} className ='font-bold text-xl text-blue-600'>WINK</Link>
+                <Link href="/" className ='font-bold text-xl text-blue-600'>WINK</Link>
             </div>
             {/* CENTER */}
             <div className="hidden md:flex w-[50%] items-center justify-between gap-4">
