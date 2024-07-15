@@ -3,14 +3,16 @@
     "53c2eeae0cf6af2420c02778e249be62b4469670": {
       "workers": {
         "app/page": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/node_modules/@clerk/nextjs/dist/esm/app-router/server-actions/invalidateCache.js [app-rsc] (ecmascript, action, ecmascript)\" } [app-rsc] (ecmascript)",
-        "app/_not-found/page": "[project]/.next-internal/server/app/_not-found/page/actions.js { ACTIONS_MODULE0 => \"[project]/node_modules/@clerk/nextjs/dist/esm/app-router/server-actions/invalidateCache.js [app-rsc] (ecmascript, action, ecmascript)\" } [app-rsc] (ecmascript)"
+        "app/_not-found/page": "[project]/.next-internal/server/app/_not-found/page/actions.js { ACTIONS_MODULE0 => \"[project]/node_modules/@clerk/nextjs/dist/esm/app-router/server-actions/invalidateCache.js [app-rsc] (ecmascript, action, ecmascript)\" } [app-rsc] (ecmascript)",
+        "app/profile/[id]/page": "[project]/.next-internal/server/app/profile/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/node_modules/@clerk/nextjs/dist/esm/app-router/server-actions/invalidateCache.js [app-rsc] (ecmascript, action, ecmascript)\" } [app-rsc] (ecmascript)"
       },
       "layer": {
         "app/page": "actionBrowser",
-        "app/_not-found/page": "actionBrowser"
+        "app/_not-found/page": "actionBrowser",
+        "app/profile/[id]/page": "actionBrowser"
       }
     }
   },
   "edge": {},
-  "encryptionKey": "qfB3uUY5hT9cSDMgLlsErs/Fn5pL5fFU3OupfKh+oK8="
+  "encryptionKey": "oYxga1MQ+gz9R4ow1bm5rOLaPcl+RgwoMeo8UuF3f18="
 }
