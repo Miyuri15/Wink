@@ -4,25 +4,6 @@ import Image from "next/image"
 
 const AddPost = ()=> {
 
-    const {userId} = auth()
-    console.log(userId)
-
-    const testAction = async (formData:FormData)=> {
-        "use server"
-        if(!userId) return
-        const desc = formData.get("desc") as string;
-        try{
-            const res = await prisma.post.create({
-                data:{
-                    userId:userId,
-                    desc:desc,
-                },
-            })
-            console.log(res)
-        }catch(err){
-            console.log(err)
-        }
-    }
 
     return(
         <div className="p-4 bg-white shadow-md rounded-lg flex gap-4 justify-between text-sm">
@@ -35,7 +16,7 @@ const AddPost = ()=> {
             {/* POST */}
             <div className="flex-1">
                 {/* TEXT INPUT */}
-                <form action={testAction} className="flex gap-4">
+                <form action="" className="flex gap-4">
                     <textarea placeholder="What's on your mind?" className="bg-slate-100 rounded-lg flex-1 p-2" name="desc">
                     </textarea>
                     <Image src="/emoji.png" 
