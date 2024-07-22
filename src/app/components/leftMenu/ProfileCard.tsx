@@ -1,6 +1,7 @@
 import Image from "next/image"
 import prisma from "@/lib/client"
 import { auth } from "@clerk/nextjs/server"
+import Link from "next/link"
 
 const ProfileCard = async ()=> {
 
@@ -38,7 +39,9 @@ const ProfileCard = async ()=> {
                 </div>
                 <span className="text-xs text-gray-500"> {user._count.followers} Followers</span>
                 </div>
+                <Link href={`/profile/${user.username}`}>
                 <button className="bg-blue-500 text-white text-xs p-2 rounded-md ">My Profile</button>
+                </Link>
             </div>
         </div>
     )
