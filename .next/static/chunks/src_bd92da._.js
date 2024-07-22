@@ -7,7 +7,6 @@ __turbopack_esm__({
     "default": ()=>__TURBOPACK__default__export__
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2d$experimental$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/compiled/react-experimental/jsx-dev-runtime.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2d$experimental$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/compiled/react-experimental/compiler-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$clerk$2f$shared$2f$dist$2f$react$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/@clerk/shared/dist/react/index.mjs [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/image.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2d$experimental$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/compiled/react-experimental/index.js [app-client] (ecmascript)");
@@ -18,100 +17,83 @@ var _s = __turbopack_refresh__.signature();
 ;
 ;
 ;
-;
-const CommentList = (t0)=>{
+const CommentList = ({ comments, postId })=>{
     _s();
-    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2d$experimental$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(10);
-    if ($[0] !== "a8b3205e5b324db115e0c8fea20ea920400ebceb3fb9ff73f3e8eac3fb4b049e") {
-        for(let $i = 0; $i < 10; $i += 1){
-            $[$i] = Symbol.for("react.memo_cache_sentinel");
-        }
-        $[0] = "a8b3205e5b324db115e0c8fea20ea920400ebceb3fb9ff73f3e8eac3fb4b049e";
-    }
-    const { comments } = t0;
     const { user } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$clerk$2f$shared$2f$dist$2f$react$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useUser"])();
-    const [commentState] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2d$experimental$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(comments);
+    const [commentState, setCommentState] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2d$experimental$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(comments);
     const [desc, setDesc] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2d$experimental$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
-    let t1;
-    if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
-        t1 = (state, value)=>[
-                value,
-                ...state
-            ];
-        $[1] = t1;
-    } else {
-        t1 = $[1];
-    }
-    const [optimisticComments] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2d$experimental$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useOptimistic"])(commentState, t1);
-    let t2;
-    if ($[2] !== user) {
-        t2 = user && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2d$experimental$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "flex items-center gap-4",
-            children: [
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2d$experimental$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                    src: user.imageUrl || "/noAvatar.png",
-                    alt: "",
-                    width: 32,
-                    height: 32,
-                    className: "w-8 h-8 rounded-full"
-                }, void 0, false, {
-                    fileName: "[project]/src/app/components/feed/CommentList.tsx",
-                    lineNumber: 33,
-                    columnNumber: 59
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2d$experimental$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "flex-1 flex items-center justify-between bg-slate-100 rounded-xl text-sm px-6 py-2 w-full",
-                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2d$experimental$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
-                        action: "",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2d$experimental$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                type: "text",
-                                placeholder: "Write a comment...",
-                                className: "bg-transparent outline-none flex-1",
-                                onChange: (e)=>setDesc(e.target.value)
-                            }, void 0, false, {
-                                fileName: "[project]/src/app/components/feed/CommentList.tsx",
-                                lineNumber: 33,
-                                columnNumber: 293
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2d$experimental$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                src: "/emoji.png",
-                                alt: "",
-                                width: 16,
-                                height: 16,
-                                className: "cursor-pointer"
-                            }, void 0, false, {
-                                fileName: "[project]/src/app/components/feed/CommentList.tsx",
-                                lineNumber: 33,
-                                columnNumber: 434
-                            }, this)
-                        ]
-                    }, void 0, true, {
+    const add = async ()=>{
+        if (!user || !desc) return;
+        addOptimisticComment();
+        try {
+            const createdComment = await add;
+        } catch (err) {}
+    };
+    const [optimisticComments, addOptimisticComment] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2d$experimental$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useOptimistic"])(commentState, (state, value)=>[
+            value,
+            ...state
+        ]);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2d$experimental$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "",
+        children: [
+            user && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2d$experimental$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "flex items-center gap-4",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2d$experimental$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                        src: user.imageUrl || "/noAvatar.png",
+                        alt: "",
+                        width: 32,
+                        height: 32,
+                        className: "w-8 h-8 rounded-full"
+                    }, void 0, false, {
                         fileName: "[project]/src/app/components/feed/CommentList.tsx",
-                        lineNumber: 33,
-                        columnNumber: 277
+                        lineNumber: 25,
+                        columnNumber: 13
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2d$experimental$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "flex-1 flex items-center justify-between bg-slate-100 rounded-xl text-sm px-6 py-2 w-full",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2d$experimental$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
+                            action: "",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2d$experimental$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                    type: "text",
+                                    placeholder: "Write a comment...",
+                                    className: "bg-transparent outline-none flex-1",
+                                    onChange: (e)=>setDesc(e.target.value)
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/components/feed/CommentList.tsx",
+                                    lineNumber: 28,
+                                    columnNumber: 21
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2d$experimental$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                    src: "/emoji.png",
+                                    alt: "",
+                                    width: 16,
+                                    height: 16,
+                                    className: "cursor-pointer"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/components/feed/CommentList.tsx",
+                                    lineNumber: 29,
+                                    columnNumber: 21
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/src/app/components/feed/CommentList.tsx",
+                            lineNumber: 27,
+                            columnNumber: 20
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/components/feed/CommentList.tsx",
+                        lineNumber: 26,
+                        columnNumber: 16
                     }, this)
-                }, void 0, false, {
-                    fileName: "[project]/src/app/components/feed/CommentList.tsx",
-                    lineNumber: 33,
-                    columnNumber: 170
-                }, this)
-            ]
-        }, void 0, true, {
-            fileName: "[project]/src/app/components/feed/CommentList.tsx",
-            lineNumber: 33,
-            columnNumber: 18
-        }, this);
-        $[2] = user;
-        $[3] = t2;
-    } else {
-        t2 = $[3];
-    }
-    let t3;
-    if ($[4] !== optimisticComments) {
-        let t4;
-        if ($[6] === Symbol.for("react.memo_cache_sentinel")) {
-            t4 = (comment)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2d$experimental$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/app/components/feed/CommentList.tsx",
+                lineNumber: 24,
+                columnNumber: 19
+            }, this),
+            optimisticComments.map((comment)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2d$experimental$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "flex gap-4 justify-between mt-6",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2d$experimental$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -122,8 +104,8 @@ const CommentList = (t0)=>{
                             className: "w-10 h-10 rounded-full"
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/feed/CommentList.tsx",
-                            lineNumber: 43,
-                            columnNumber: 89
+                            lineNumber: 36,
+                            columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2d$experimental$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "flex flex-col gap-2 flex-1",
@@ -133,15 +115,15 @@ const CommentList = (t0)=>{
                                     children: comment.user.name && comment.user.surname ? comment.user.name + "" + comment.user.surname : comment.user.username
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/feed/CommentList.tsx",
-                                    lineNumber: 43,
-                                    columnNumber: 252
+                                    lineNumber: 39,
+                                    columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2d$experimental$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     children: comment.desc
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/feed/CommentList.tsx",
-                                    lineNumber: 43,
-                                    columnNumber: 404
+                                    lineNumber: 40,
+                                    columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2d$experimental$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "flex items-center gap-8 text-sm text-gray-500 mt-2",
@@ -158,49 +140,49 @@ const CommentList = (t0)=>{
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/components/feed/CommentList.tsx",
                                                     lineNumber: 43,
-                                                    columnNumber: 534
+                                                    columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2d$experimental$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     className: "text-gray-300",
                                                     children: "|"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/components/feed/CommentList.tsx",
-                                                    lineNumber: 43,
-                                                    columnNumber: 624
+                                                    lineNumber: 44,
+                                                    columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2d$experimental$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     className: "text-gray-500",
                                                     children: "0 Likes"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/components/feed/CommentList.tsx",
-                                                    lineNumber: 43,
-                                                    columnNumber: 664
+                                                    lineNumber: 45,
+                                                    columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/components/feed/CommentList.tsx",
-                                            lineNumber: 43,
-                                            columnNumber: 493
+                                            lineNumber: 42,
+                                            columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2d$experimental$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "",
                                             children: "Reply"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/components/feed/CommentList.tsx",
-                                            lineNumber: 43,
-                                            columnNumber: 716
+                                            lineNumber: 47,
+                                            columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/components/feed/CommentList.tsx",
-                                    lineNumber: 43,
-                                    columnNumber: 425
+                                    lineNumber: 41,
+                                    columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/components/feed/CommentList.tsx",
-                            lineNumber: 43,
-                            columnNumber: 208
+                            lineNumber: 38,
+                            columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2d$experimental$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                             src: "/more.png",
@@ -210,47 +192,23 @@ const CommentList = (t0)=>{
                             className: "cursor-pointer w-4 h-4"
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/feed/CommentList.tsx",
-                            lineNumber: 43,
-                            columnNumber: 757
+                            lineNumber: 51,
+                            columnNumber: 13
                         }, this)
                     ]
                 }, comment.id, true, {
                     fileName: "[project]/src/app/components/feed/CommentList.tsx",
-                    lineNumber: 43,
-                    columnNumber: 23
-                }, this);
-            $[6] = t4;
-        } else {
-            t4 = $[6];
-        }
-        t3 = optimisticComments.map(t4);
-        $[4] = optimisticComments;
-        $[5] = t3;
-    } else {
-        t3 = $[5];
-    }
-    let t4;
-    if ($[7] !== t2 || $[8] !== t3) {
-        t4 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2d$experimental$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "",
-            children: [
-                t2,
-                t3
-            ]
-        }, void 0, true, {
-            fileName: "[project]/src/app/components/feed/CommentList.tsx",
-            lineNumber: 56,
-            columnNumber: 10
-        }, this);
-        $[7] = t2;
-        $[8] = t3;
-        $[9] = t4;
-    } else {
-        t4 = $[9];
-    }
-    return t4;
+                    lineNumber: 34,
+                    columnNumber: 44
+                }, this))
+        ]
+    }, void 0, true, {
+        fileName: "[project]/src/app/components/feed/CommentList.tsx",
+        lineNumber: 23,
+        columnNumber: 10
+    }, this);
 };
-_s(CommentList, "PjbCNR3ugcjc3xOHgaSNuEO5UPA=", false, function() {
+_s(CommentList, "lNQJcBDtxO9upyWkH7PWAOYRkH0=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$clerk$2f$shared$2f$dist$2f$react$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useUser"],
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2d$experimental$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useOptimistic"]
@@ -265,8 +223,9 @@ __turbopack_refresh__.register(_c, "CommentList");
 "[project]/src/lib/actions.ts [app-client] (ecmascript)": (({ r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, g: global, __dirname, k: __turbopack_refresh__ }) => (() => {
 "use strict";
 
-/* __next_internal_action_entry_do_not_use__ {"0084cb94305ee387ac5e87a0921c1271a3b107e6":"switchBlock","0fd5b49ccdc328272aa7ad5642ab40269c71c4f4":"switchFollow","1e2b2d16347e28e8fd6e7d5a4daefe5bc7dc00a4":"$$ACTION_0","409d843be3d3815572a200c566634923792c71ea":"switchLike","57aaea0f394ee06bfec15053e86125c0fc59ffa3":"$$ACTION_3","7569e95a44f3adc628d5c93b66818854d7219f18":"$$ACTION_5","7b8babcdcacf828f20e153fff1c45130b0f78a2b":"$$ACTION_1","8d0086f7a5acc0062916d46dd8e58bd746f48d67":"acceptFollowRequest","9f25b713a22b6d6e710339d627dab31169929f7c":"declineFollowRequest","ab4bdc0d8caf5e76469bfc9562fcbe29fe182de1":"$$ACTION_2","d2d2977eaf6b8d22c967ccf86f83bd26990fa227":"updateProfile","efa0e35d2563bc6d1b359fb16b4d7fb6c23c2b35":"$$ACTION_4"} */ __turbopack_esm__({
+/* __next_internal_action_entry_do_not_use__ {"0084cb94305ee387ac5e87a0921c1271a3b107e6":"switchBlock","0fd5b49ccdc328272aa7ad5642ab40269c71c4f4":"switchFollow","1e2b2d16347e28e8fd6e7d5a4daefe5bc7dc00a4":"$$ACTION_0","409d843be3d3815572a200c566634923792c71ea":"switchLike","57aaea0f394ee06bfec15053e86125c0fc59ffa3":"$$ACTION_3","7569e95a44f3adc628d5c93b66818854d7219f18":"$$ACTION_5","7a71cb61fb694e84579c880d6b7b0b01b703907b":"$$ACTION_6","7b8babcdcacf828f20e153fff1c45130b0f78a2b":"$$ACTION_1","8d0086f7a5acc0062916d46dd8e58bd746f48d67":"acceptFollowRequest","8f6a69372a9df1d13a25083259900ed5e90e71aa":"addComment","9f25b713a22b6d6e710339d627dab31169929f7c":"declineFollowRequest","ab4bdc0d8caf5e76469bfc9562fcbe29fe182de1":"$$ACTION_2","d2d2977eaf6b8d22c967ccf86f83bd26990fa227":"updateProfile","efa0e35d2563bc6d1b359fb16b4d7fb6c23c2b35":"$$ACTION_4"} */ __turbopack_esm__({
     "acceptFollowRequest": ()=>acceptFollowRequest,
+    "addComment": ()=>addComment,
     "declineFollowRequest": ()=>declineFollowRequest,
     "switchBlock": ()=>switchBlock,
     "switchFollow": ()=>switchFollow,
@@ -275,13 +234,14 @@ __turbopack_refresh__.register(_c, "CommentList");
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/build/webpack/loaders/next-flight-loader/action-client-wrapper.js [app-client] (ecmascript)");
 "__TURBOPACK__ecmascript__hoisting__location__";
-var switchLike = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["createServerReference"])("409d843be3d3815572a200c566634923792c71ea");
+var addComment = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["createServerReference"])("8f6a69372a9df1d13a25083259900ed5e90e71aa");
 ;
 var switchFollow = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["createServerReference"])("0fd5b49ccdc328272aa7ad5642ab40269c71c4f4");
 var switchBlock = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["createServerReference"])("0084cb94305ee387ac5e87a0921c1271a3b107e6");
 var acceptFollowRequest = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["createServerReference"])("8d0086f7a5acc0062916d46dd8e58bd746f48d67");
 var declineFollowRequest = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["createServerReference"])("9f25b713a22b6d6e710339d627dab31169929f7c");
 var updateProfile = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["createServerReference"])("d2d2977eaf6b8d22c967ccf86f83bd26990fa227");
+var switchLike = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["createServerReference"])("409d843be3d3815572a200c566634923792c71ea");
 
 })()),
 "[project]/src/app/components/feed/PostInteraction.tsx [app-client] (ecmascript)": (({ r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, g: global, __dirname, k: __turbopack_refresh__ }) => (() => {

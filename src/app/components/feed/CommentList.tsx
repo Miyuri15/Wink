@@ -1,4 +1,5 @@
 "use client"
+import { addComment } from "@/lib/actions";
 import { useUser } from "@clerk/nextjs";
 import { User,Comment} from "@prisma/client";
 import Image from "next/image"
@@ -12,6 +13,40 @@ const {user} = useUser()
 const [commentState, setCommentState] = useState(comments)
 const [desc, setDesc] = useState("")
 
+const add = async ()=>{
+    if(!user || !desc) return;
+
+    addOptimisticComment({
+        id:Math.random(),
+        desc,
+        createdAt:new Date(Date.now()),
+        updatedAt:new Date(Date.now()),
+        userId:user.id,
+        postId:postId,
+        user:{
+            id:user.id,
+            username:"Sending Please wait...",
+            avatar:user.imageUrl || "/noAvatar.png",
+            cover:"",
+            description:"",
+            name:"",
+            city:"",
+            surname:"",
+            work:"",
+            school:"",
+            website:"",
+            createdAt: new Date(Date.now()),
+        }
+
+    });
+
+    try{
+        const createdComment = await addComment(postId,desc)
+        setCommentState((prev)=> [createdComment,...prev])
+    }catch(err){}
+
+}
+
 const [optimisticComments,addOptimisticComment] = useOptimistic(commentState,
     (state,value:CommentWithUser)=>[value,...state]
 )
@@ -20,7 +55,7 @@ const [optimisticComments,addOptimisticComment] = useOptimistic(commentState,
          {user && (<div className="flex items-center gap-4">
             <Image src={user.imageUrl || "/noAvatar.png"} alt="" width={32} height={32} className="w-8 h-8 rounded-full"/>
                <div className="flex-1 flex items-center justify-between bg-slate-100 rounded-xl text-sm px-6 py-2 w-full">
-                   <form action = "">
+                   <form action = {add}>
                     <input type="text" placeholder="Write a comment..." className="bg-transparent outline-none flex-1"
                      onChange={e=>setDesc(e.target.value)} />
                     <Image src="/emoji.png" alt="" width={16} height={16} className="cursor-pointer"

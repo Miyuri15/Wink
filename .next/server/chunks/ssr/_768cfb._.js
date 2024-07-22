@@ -1253,12 +1253,16 @@ __turbopack_export_value__({
     '409d843be3d3815572a200c566634923792c71ea': (...args)=>Promise.resolve(__turbopack_require__("[project]/src/lib/actions.ts [app-rsc] (ecmascript, action, ecmascript)")).then((mod)=>(0, mod['switchLike'])(...args)),
     '53c2eeae0cf6af2420c02778e249be62b4469670': (...args)=>Promise.resolve(__turbopack_require__("[project]/node_modules/@clerk/nextjs/dist/esm/app-router/server-actions/invalidateCache.js [app-rsc] (ecmascript, action, ecmascript)")).then((mod)=>(0, mod['invalidateCacheAction'])(...args)),
     '57aaea0f394ee06bfec15053e86125c0fc59ffa3': (...args)=>Promise.resolve(__turbopack_require__("[project]/src/lib/actions.ts [app-rsc] (ecmascript, action, ecmascript)")).then((mod)=>(0, mod['$$ACTION_3'])(...args)),
+    '5faf738f59832aae143a56214a0079d47ee32829': (...args)=>Promise.resolve(__turbopack_require__("[project]/src/lib/actions.ts [app-rsc] (ecmascript, action, ecmascript)")).then((mod)=>(0, mod['addPost'])(...args)),
     '7569e95a44f3adc628d5c93b66818854d7219f18': (...args)=>Promise.resolve(__turbopack_require__("[project]/src/lib/actions.ts [app-rsc] (ecmascript, action, ecmascript)")).then((mod)=>(0, mod['$$ACTION_5'])(...args)),
+    '7a71cb61fb694e84579c880d6b7b0b01b703907b': (...args)=>Promise.resolve(__turbopack_require__("[project]/src/lib/actions.ts [app-rsc] (ecmascript, action, ecmascript)")).then((mod)=>(0, mod['$$ACTION_6'])(...args)),
     '7b8babcdcacf828f20e153fff1c45130b0f78a2b': (...args)=>Promise.resolve(__turbopack_require__("[project]/src/lib/actions.ts [app-rsc] (ecmascript, action, ecmascript)")).then((mod)=>(0, mod['$$ACTION_1'])(...args)),
     '8d0086f7a5acc0062916d46dd8e58bd746f48d67': (...args)=>Promise.resolve(__turbopack_require__("[project]/src/lib/actions.ts [app-rsc] (ecmascript, action, ecmascript)")).then((mod)=>(0, mod['acceptFollowRequest'])(...args)),
+    '8f6a69372a9df1d13a25083259900ed5e90e71aa': (...args)=>Promise.resolve(__turbopack_require__("[project]/src/lib/actions.ts [app-rsc] (ecmascript, action, ecmascript)")).then((mod)=>(0, mod['addComment'])(...args)),
     '9f25b713a22b6d6e710339d627dab31169929f7c': (...args)=>Promise.resolve(__turbopack_require__("[project]/src/lib/actions.ts [app-rsc] (ecmascript, action, ecmascript)")).then((mod)=>(0, mod['declineFollowRequest'])(...args)),
     'ab4bdc0d8caf5e76469bfc9562fcbe29fe182de1': (...args)=>Promise.resolve(__turbopack_require__("[project]/src/lib/actions.ts [app-rsc] (ecmascript, action, ecmascript)")).then((mod)=>(0, mod['$$ACTION_2'])(...args)),
     'd2d2977eaf6b8d22c967ccf86f83bd26990fa227': (...args)=>Promise.resolve(__turbopack_require__("[project]/src/lib/actions.ts [app-rsc] (ecmascript, action, ecmascript)")).then((mod)=>(0, mod['updateProfile'])(...args)),
+    'dcd407e7596ed65d386ed84368405b49dbfdd388': (...args)=>Promise.resolve(__turbopack_require__("[project]/src/lib/actions.ts [app-rsc] (ecmascript, action, ecmascript)")).then((mod)=>(0, mod['$$ACTION_7'])(...args)),
     'efa0e35d2563bc6d1b359fb16b4d7fb6c23c2b35': (...args)=>Promise.resolve(__turbopack_require__("[project]/src/lib/actions.ts [app-rsc] (ecmascript, action, ecmascript)")).then((mod)=>(0, mod['$$ACTION_4'])(...args))
 });
 

@@ -647,7 +647,9 @@ const Post = ({ post })=>{
                 lineNumber: 27,
                 columnNumber: 13
             }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$feed$2f$Comments$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$feed$2f$Comments$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
+                postId: post.id
+            }, void 0, false, {
                 fileName: "[project]/src/app/components/feed/Post.tsx",
                 lineNumber: 28,
                 columnNumber: 9
@@ -715,10 +717,14 @@ const Feed = async ({ username })=>{
             }
         });
         const followingIds = following.map((f)=>f.followingId);
+        const ids = [
+            userId,
+            ...followingIds
+        ];
         posts = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$client$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"].post.findMany({
             where: {
                 userId: {
-                    in: followingIds
+                    in: ids
                 }
             },
             include: {
@@ -745,12 +751,12 @@ const Feed = async ({ username })=>{
                 post: post
             }, post.id, false, {
                 fileName: "[project]/src/app/components/feed/Feed.tsx",
-                lineNumber: 77,
+                lineNumber: 78,
                 columnNumber: 17
             }, this)) : "No posts found!"
     }, void 0, false, {
         fileName: "[project]/src/app/components/feed/Feed.tsx",
-        lineNumber: 75,
+        lineNumber: 76,
         columnNumber: 9
     }, this);
 };
@@ -2497,14 +2503,18 @@ __turbopack_esm__({
 "[project]/src/lib/actions.ts [app-rsc] (ecmascript, action, ecmascript)": (({ r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, g: global, __dirname, x: __turbopack_external_require__, y: __turbopack_external_import__ }) => (() => {
 "use strict";
 
-/* __next_internal_action_entry_do_not_use__ {"0084cb94305ee387ac5e87a0921c1271a3b107e6":"switchBlock","0fd5b49ccdc328272aa7ad5642ab40269c71c4f4":"switchFollow","1e2b2d16347e28e8fd6e7d5a4daefe5bc7dc00a4":"$$ACTION_0","409d843be3d3815572a200c566634923792c71ea":"switchLike","57aaea0f394ee06bfec15053e86125c0fc59ffa3":"$$ACTION_3","7569e95a44f3adc628d5c93b66818854d7219f18":"$$ACTION_5","7b8babcdcacf828f20e153fff1c45130b0f78a2b":"$$ACTION_1","8d0086f7a5acc0062916d46dd8e58bd746f48d67":"acceptFollowRequest","9f25b713a22b6d6e710339d627dab31169929f7c":"declineFollowRequest","ab4bdc0d8caf5e76469bfc9562fcbe29fe182de1":"$$ACTION_2","d2d2977eaf6b8d22c967ccf86f83bd26990fa227":"updateProfile","efa0e35d2563bc6d1b359fb16b4d7fb6c23c2b35":"$$ACTION_4"} */ __turbopack_esm__({
+/* __next_internal_action_entry_do_not_use__ {"0084cb94305ee387ac5e87a0921c1271a3b107e6":"switchBlock","0fd5b49ccdc328272aa7ad5642ab40269c71c4f4":"switchFollow","1e2b2d16347e28e8fd6e7d5a4daefe5bc7dc00a4":"$$ACTION_0","409d843be3d3815572a200c566634923792c71ea":"switchLike","57aaea0f394ee06bfec15053e86125c0fc59ffa3":"$$ACTION_3","5faf738f59832aae143a56214a0079d47ee32829":"addPost","7569e95a44f3adc628d5c93b66818854d7219f18":"$$ACTION_5","7a71cb61fb694e84579c880d6b7b0b01b703907b":"$$ACTION_6","7b8babcdcacf828f20e153fff1c45130b0f78a2b":"$$ACTION_1","8d0086f7a5acc0062916d46dd8e58bd746f48d67":"acceptFollowRequest","8f6a69372a9df1d13a25083259900ed5e90e71aa":"addComment","9f25b713a22b6d6e710339d627dab31169929f7c":"declineFollowRequest","ab4bdc0d8caf5e76469bfc9562fcbe29fe182de1":"$$ACTION_2","d2d2977eaf6b8d22c967ccf86f83bd26990fa227":"updateProfile","dcd407e7596ed65d386ed84368405b49dbfdd388":"$$ACTION_7","efa0e35d2563bc6d1b359fb16b4d7fb6c23c2b35":"$$ACTION_4"} */ __turbopack_esm__({
     "$$ACTION_0": ()=>$$ACTION_0,
     "$$ACTION_1": ()=>$$ACTION_1,
     "$$ACTION_2": ()=>$$ACTION_2,
     "$$ACTION_3": ()=>$$ACTION_3,
     "$$ACTION_4": ()=>$$ACTION_4,
     "$$ACTION_5": ()=>$$ACTION_5,
+    "$$ACTION_6": ()=>$$ACTION_6,
+    "$$ACTION_7": ()=>$$ACTION_7,
     "acceptFollowRequest": ()=>acceptFollowRequest,
+    "addComment": ()=>addComment,
+    "addPost": ()=>addPost,
     "declineFollowRequest": ()=>declineFollowRequest,
     "switchBlock": ()=>switchBlock,
     "switchFollow": ()=>switchFollow,
@@ -2516,8 +2526,10 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$clerk$2f$nextjs$2f$dist$2f$esm$2f$app$2d$router$2f$server$2f$auth$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/@clerk/nextjs/dist/esm/app-router/server/auth.js [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$client$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/lib/client.ts [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/zod/lib/index.mjs [app-rsc] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$cache$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/cache.js [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$validate$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/build/webpack/loaders/next-flight-loader/action-validate.js [app-rsc] (ecmascript)");
 "__TURBOPACK__ecmascript__hoisting__location__";
+;
 ;
 ;
 ;
@@ -2737,6 +2749,52 @@ async function $$ACTION_5(postId) {
         throw new Error("Something went wrong!");
     }
 }
+const addComment = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])("7a71cb61fb694e84579c880d6b7b0b01b703907b", $$ACTION_6);
+async function $$ACTION_6(postId, desc) {
+    const { userId } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$clerk$2f$nextjs$2f$dist$2f$esm$2f$app$2d$router$2f$server$2f$auth$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["auth"])();
+    if (!userId) throw new Error("User is not authenticated!");
+    try {
+        const createdComment = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$client$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"].comment.create({
+            data: {
+                desc,
+                userId,
+                postId
+            },
+            include: {
+                user: true
+            }
+        });
+        return createdComment;
+    } catch (err) {
+        console.log(err);
+        throw new Error("Something went wrong!");
+    }
+}
+const addPost = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])("dcd407e7596ed65d386ed84368405b49dbfdd388", $$ACTION_7);
+async function $$ACTION_7(formData, img) {
+    const desc = formData.get("desc");
+    const Desc = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["z"].string().min(1).max(255);
+    const validateDesc = Desc.safeParse(desc);
+    if (!validateDesc.success) {
+        //TODO
+        console.log("description is not valid");
+        return;
+    }
+    const { userId } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$clerk$2f$nextjs$2f$dist$2f$esm$2f$app$2d$router$2f$server$2f$auth$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["auth"])();
+    if (!userId) throw new Error("User is not authenticated!");
+    try {
+        await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$client$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"].post.create({
+            data: {
+                desc: validateDesc.data,
+                userId,
+                img
+            }
+        });
+        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$cache$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["revalidatePath"])("/");
+    } catch (err) {
+        console.log(err);
+    }
+}
 ;
 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$validate$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["ensureServerEntryExports"])([
     switchFollow,
@@ -2744,7 +2802,9 @@ async function $$ACTION_5(postId) {
     acceptFollowRequest,
     declineFollowRequest,
     updateProfile,
-    switchLike
+    switchLike,
+    addComment,
+    addPost
 ]);
 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])("0fd5b49ccdc328272aa7ad5642ab40269c71c4f4", switchFollow);
 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])("0084cb94305ee387ac5e87a0921c1271a3b107e6", switchBlock);
@@ -2752,6 +2812,8 @@ async function $$ACTION_5(postId) {
 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])("9f25b713a22b6d6e710339d627dab31169929f7c", declineFollowRequest);
 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])("d2d2977eaf6b8d22c967ccf86f83bd26990fa227", updateProfile);
 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])("409d843be3d3815572a200c566634923792c71ea", switchLike);
+(0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])("8f6a69372a9df1d13a25083259900ed5e90e71aa", addComment);
+(0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])("5faf738f59832aae143a56214a0079d47ee32829", addPost);
 
 })()),
 

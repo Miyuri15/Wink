@@ -7,6 +7,7 @@ __turbopack_esm__({
     "default": ()=>__TURBOPACK__default__export__
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/server/future/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$actions$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/lib/actions.ts [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$clerk$2f$shared$2f$dist$2f$react$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/@clerk/shared/dist/react/index.mjs [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/image.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/server/future/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
@@ -16,10 +17,18 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 ;
 ;
+;
 const CommentList = ({ comments, postId })=>{
     const { user } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$clerk$2f$shared$2f$dist$2f$react$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useUser"])();
     const [commentState, setCommentState] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(comments);
     const [desc, setDesc] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
+    const add = async ()=>{
+        if (!user || !desc) return;
+        addOptimisticComment();
+        try {
+            const createdComment = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$actions$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["addComment"];
+        } catch (err) {}
+    };
     const [optimisticComments, addOptimisticComment] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useOptimistic"])(commentState, (state, value)=>[
             value,
             ...state
@@ -38,7 +47,7 @@ const CommentList = ({ comments, postId })=>{
                         className: "w-8 h-8 rounded-full"
                     }, void 0, false, {
                         fileName: "[project]/src/app/components/feed/CommentList.tsx",
-                        lineNumber: 21,
+                        lineNumber: 31,
                         columnNumber: 13
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -53,7 +62,7 @@ const CommentList = ({ comments, postId })=>{
                                     onChange: (e)=>setDesc(e.target.value)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/feed/CommentList.tsx",
-                                    lineNumber: 24,
+                                    lineNumber: 34,
                                     columnNumber: 21
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -64,24 +73,24 @@ const CommentList = ({ comments, postId })=>{
                                     className: "cursor-pointer"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/feed/CommentList.tsx",
-                                    lineNumber: 26,
+                                    lineNumber: 36,
                                     columnNumber: 21
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/components/feed/CommentList.tsx",
-                            lineNumber: 23,
+                            lineNumber: 33,
                             columnNumber: 20
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/components/feed/CommentList.tsx",
-                        lineNumber: 22,
+                        lineNumber: 32,
                         columnNumber: 16
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/components/feed/CommentList.tsx",
-                lineNumber: 20,
+                lineNumber: 30,
                 columnNumber: 20
             }, this),
             optimisticComments.map((comment)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -95,7 +104,7 @@ const CommentList = ({ comments, postId })=>{
                             className: "w-10 h-10 rounded-full"
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/feed/CommentList.tsx",
-                            lineNumber: 36,
+                            lineNumber: 46,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -106,14 +115,14 @@ const CommentList = ({ comments, postId })=>{
                                     children: comment.user.name && comment.user.surname ? comment.user.name + "" + comment.user.surname : comment.user.username
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/feed/CommentList.tsx",
-                                    lineNumber: 39,
+                                    lineNumber: 49,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     children: comment.desc
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/feed/CommentList.tsx",
-                                    lineNumber: 40,
+                                    lineNumber: 50,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -130,7 +139,7 @@ const CommentList = ({ comments, postId })=>{
                                                     className: "cursor-pointer w-4 h-4"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/components/feed/CommentList.tsx",
-                                                    lineNumber: 43,
+                                                    lineNumber: 53,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -138,7 +147,7 @@ const CommentList = ({ comments, postId })=>{
                                                     children: "|"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/components/feed/CommentList.tsx",
-                                                    lineNumber: 44,
+                                                    lineNumber: 54,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -146,13 +155,13 @@ const CommentList = ({ comments, postId })=>{
                                                     children: "0 Likes"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/components/feed/CommentList.tsx",
-                                                    lineNumber: 45,
+                                                    lineNumber: 55,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/components/feed/CommentList.tsx",
-                                            lineNumber: 42,
+                                            lineNumber: 52,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -160,19 +169,19 @@ const CommentList = ({ comments, postId })=>{
                                             children: "Reply"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/components/feed/CommentList.tsx",
-                                            lineNumber: 47,
+                                            lineNumber: 57,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/components/feed/CommentList.tsx",
-                                    lineNumber: 41,
+                                    lineNumber: 51,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/components/feed/CommentList.tsx",
-                            lineNumber: 38,
+                            lineNumber: 48,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -183,19 +192,19 @@ const CommentList = ({ comments, postId })=>{
                             className: "cursor-pointer w-4 h-4"
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/feed/CommentList.tsx",
-                            lineNumber: 51,
+                            lineNumber: 61,
                             columnNumber: 13
                         }, this)
                     ]
                 }, comment.id, true, {
                     fileName: "[project]/src/app/components/feed/CommentList.tsx",
-                    lineNumber: 34,
+                    lineNumber: 44,
                     columnNumber: 8
                 }, this))
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/components/feed/CommentList.tsx",
-        lineNumber: 19,
+        lineNumber: 29,
         columnNumber: 9
     }, this);
 };
@@ -205,8 +214,9 @@ const __TURBOPACK__default__export__ = CommentList;
 "[project]/src/lib/actions.ts [app-ssr] (ecmascript)": (({ r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, g: global, __dirname, x: __turbopack_external_require__, y: __turbopack_external_import__ }) => (() => {
 "use strict";
 
-/* __next_internal_action_entry_do_not_use__ {"0084cb94305ee387ac5e87a0921c1271a3b107e6":"switchBlock","0fd5b49ccdc328272aa7ad5642ab40269c71c4f4":"switchFollow","1e2b2d16347e28e8fd6e7d5a4daefe5bc7dc00a4":"$$ACTION_0","409d843be3d3815572a200c566634923792c71ea":"switchLike","57aaea0f394ee06bfec15053e86125c0fc59ffa3":"$$ACTION_3","7569e95a44f3adc628d5c93b66818854d7219f18":"$$ACTION_5","7b8babcdcacf828f20e153fff1c45130b0f78a2b":"$$ACTION_1","8d0086f7a5acc0062916d46dd8e58bd746f48d67":"acceptFollowRequest","9f25b713a22b6d6e710339d627dab31169929f7c":"declineFollowRequest","ab4bdc0d8caf5e76469bfc9562fcbe29fe182de1":"$$ACTION_2","d2d2977eaf6b8d22c967ccf86f83bd26990fa227":"updateProfile","efa0e35d2563bc6d1b359fb16b4d7fb6c23c2b35":"$$ACTION_4"} */ __turbopack_esm__({
+/* __next_internal_action_entry_do_not_use__ {"0084cb94305ee387ac5e87a0921c1271a3b107e6":"switchBlock","0fd5b49ccdc328272aa7ad5642ab40269c71c4f4":"switchFollow","1e2b2d16347e28e8fd6e7d5a4daefe5bc7dc00a4":"$$ACTION_0","409d843be3d3815572a200c566634923792c71ea":"switchLike","57aaea0f394ee06bfec15053e86125c0fc59ffa3":"$$ACTION_3","7569e95a44f3adc628d5c93b66818854d7219f18":"$$ACTION_5","7a71cb61fb694e84579c880d6b7b0b01b703907b":"$$ACTION_6","7b8babcdcacf828f20e153fff1c45130b0f78a2b":"$$ACTION_1","8d0086f7a5acc0062916d46dd8e58bd746f48d67":"acceptFollowRequest","8f6a69372a9df1d13a25083259900ed5e90e71aa":"addComment","9f25b713a22b6d6e710339d627dab31169929f7c":"declineFollowRequest","ab4bdc0d8caf5e76469bfc9562fcbe29fe182de1":"$$ACTION_2","d2d2977eaf6b8d22c967ccf86f83bd26990fa227":"updateProfile","efa0e35d2563bc6d1b359fb16b4d7fb6c23c2b35":"$$ACTION_4"} */ __turbopack_esm__({
     "acceptFollowRequest": ()=>acceptFollowRequest,
+    "addComment": ()=>addComment,
     "declineFollowRequest": ()=>declineFollowRequest,
     "switchBlock": ()=>switchBlock,
     "switchFollow": ()=>switchFollow,
@@ -215,13 +225,14 @@ const __TURBOPACK__default__export__ = CommentList;
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/build/webpack/loaders/next-flight-loader/action-client-wrapper.js [app-ssr] (ecmascript)");
 "__TURBOPACK__ecmascript__hoisting__location__";
-var switchLike = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["createServerReference"])("409d843be3d3815572a200c566634923792c71ea");
+var addComment = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["createServerReference"])("8f6a69372a9df1d13a25083259900ed5e90e71aa");
 ;
 var switchFollow = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["createServerReference"])("0fd5b49ccdc328272aa7ad5642ab40269c71c4f4");
 var switchBlock = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["createServerReference"])("0084cb94305ee387ac5e87a0921c1271a3b107e6");
 var acceptFollowRequest = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["createServerReference"])("8d0086f7a5acc0062916d46dd8e58bd746f48d67");
 var declineFollowRequest = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["createServerReference"])("9f25b713a22b6d6e710339d627dab31169929f7c");
 var updateProfile = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["createServerReference"])("d2d2977eaf6b8d22c967ccf86f83bd26990fa227");
+var switchLike = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["createServerReference"])("409d843be3d3815572a200c566634923792c71ea");
 
 })()),
 "[project]/src/app/components/feed/PostInteraction.tsx [app-ssr] (ecmascript)": (({ r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, g: global, __dirname, x: __turbopack_external_require__, y: __turbopack_external_import__ }) => (() => {

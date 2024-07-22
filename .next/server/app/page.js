@@ -1,7 +1,7 @@
 const CHUNK_PUBLIC_PATH = "server/app/page.js";
 const runtime = require("../chunks/ssr/[turbopack]_runtime.js");
-runtime.loadChunk("server/chunks/ssr/[root of the server]__5240b7._.js");
-runtime.loadChunk("server/chunks/ssr/node_modules_next_0d82aa._.js");
+runtime.loadChunk("server/chunks/ssr/[root of the server]__a16adc._.js");
+runtime.loadChunk("server/chunks/ssr/node_modules_next_f89ac2._.js");
 runtime.loadChunk("server/chunks/ssr/_aeb6e9._.js");
 runtime.loadChunk("server/chunks/ssr/node_modules_@clerk_backend_dist_6891da._.js");
 runtime.loadChunk("server/chunks/ssr/node_modules_zod_lib_index_mjs_8e7072._.js");
